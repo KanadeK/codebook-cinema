@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codebook-cinema"
+version = "0.1.0"
+description = "Turn a code repository into evidence-linked teaching chapters, architecture diagrams, and storyboards."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [{name = "KanadeK", email = "121669563+KanadeK@users.noreply.github.com"}]
+dependencies = [
+  "jinja2==3.1.6",
+  "networkx==3.4.2",
+  "tree-sitter==0.24.0",
+  "tree-sitter-typescript==0.23.2",
+  "typer==0.15.2",
+]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.optional-dependencies]
+dev = [
+  "build==1.2.2.post1",
+  "mypy==1.15.0",
+  "pytest==8.3.5",
+  "pytest-cov==6.0.0",
+  "ruff==0.9.10",
+]
+
+[project.scripts]
+codebook-cinema = "codebook_cinema.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codebook_cinema"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["codebook_cinema"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["codebook_cinema"]

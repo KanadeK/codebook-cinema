@@ -1,0 +1,8 @@
+name: Feature request
+description: Suggest an evidence-linked workflow improvement.
+body:
+  - type: textarea
+    attributes:
+      label: Problem and proposed outcome
+    validations:
+      required: true

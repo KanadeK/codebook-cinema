@@ -1,0 +1,9 @@
+name: Bug report
+description: Report a reproducible problem.
+body:
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Command, input and observed output.
+    validations:
+      required: true
