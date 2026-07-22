@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 license = {text = "MIT"}
 authors = [{name = "KanadeK", email = "121669563+KanadeK@users.noreply.github.com"}]
 dependencies = [
-  "click==8.1.8",
+  "click==8.3.3",
   "jinja2==3.1.6",
   "networkx==3.4.2",
   "tree-sitter==0.24.0",
