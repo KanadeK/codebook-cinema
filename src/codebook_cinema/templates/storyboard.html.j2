@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codebook Cinema storyboard</title>
+  <style>body{font:16px system-ui;max-width:960px;margin:2rem auto;padding:0 1rem;color:#172033}pre{white-space:pre-wrap;background:#f3f5f8;padding:1rem}article{border-left:4px solid #555;padding-left:1rem;margin:1.2rem 0}.evidence{font-family:monospace;color:#0f4c81}</style>
+</head>
+<body>
+  <h1>Codebook Cinema</h1>
+  <p>Local, evidence-linked storyboard for <code>{{ report.root }}</code>.</p>
+  <h2>Architecture diagram</h2><pre>{{ report.mermaid }}</pre>
+  <h2>Chapters</h2>
+  {% for chapter in report.chapters %}<article><h3>{{ chapter.title }}</h3><p>{{ chapter.summary }}</p><p class="evidence">{{ chapter.evidence|join(', ') }}</p></article>{% endfor %}
+  <h2>Shot list and narration</h2>
+  {% for shot in report.shots %}<article><h3>{{ shot.number }}. {{ shot.title }}</h3><p class="evidence">{{ shot.evidence }}</p><p>{{ shot.narration }}</p></article>{% endfor %}
+  {% if report.warnings %}<h2>Warnings</h2><ul>{% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}</ul>{% endif %}
+</body></html>
