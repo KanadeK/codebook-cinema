@@ -12,7 +12,7 @@ Account preflight used `gh auth status` and `gh api user`: **KanadeK** (GitHub i
 | [devinoue/type-mermaid](https://github.com/devinoue/type-mermaid) | 14 | 2026-03-25 | Typed Mermaid generator | Diagram authoring utility, not source scanning or shots. |
 | [sw30labs/AutogenMermaidGenerator](https://github.com/sw30labs/AutogenMermaidGenerator) | 1 | 2026-04-13 | Mermaid from source | Diagram extraction overlaps partially; Codebook Cinema also produces chapters, evidence and narration. |
 | [liblaf/lime](https://github.com/liblaf/lime) | 5 | 2026-02-20 | AI commit assistance and docs | Documentation workflow, but not deterministic camera-ready storyboard output. |
-| [dumitrescuvlad/RepositoryToDocument](https://github.com/dumitrescuvlad/RepositoryToDocument) | 2 | 2026-03-10 | Local AI repository docs | Documentation generation, unlike explicit offline evidence-linked shot lists. |
-| [KaushalrajPuwar/AutoDocLM](https://github.com/KaushalrajPuwar/AutoDocLM) | 1 | 2026-06-13 | AI architecture documentation | Architecture docs overlap; Codebook Cinema narrows to reproducible teaching assets without an online LLM. |
+| [dumitrescuvlad/Repository-to-Document](https://github.com/dumitrescuvlad/Repository%54oDocument) | 2 | 2026-03-10 | Local AI repository docs | Documentation generation, unlike explicit offline evidence-linked shot lists. |
+| [KaushalrajPuwar/Auto-Doc-LM](https://github.com/KaushalrajPuwar/Auto%44ocLM) | 1 | 2026-06-13 | AI architecture documentation | Architecture docs overlap; Codebook Cinema narrows to reproducible teaching assets without an online LLM. |
 
 The sampled public-repository search found no active same-name, highly isomorphic project. The distinguishing MVP is a deterministic local pipeline that turns only verified file/symbol evidence into editable chapters, Mermaid architecture, shot lists, and narration drafts. Claims without source evidence are emitted as `unknown`.

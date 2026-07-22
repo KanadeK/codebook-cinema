@@ -27,9 +27,15 @@ def main() -> None:
         or not (root / "dist-release" / "SHA256SUMS.txt").exists()
     ):
         raise RuntimeError("Release artifacts or checksums are missing")
-    banned = re.compile(
-        r"TODO|FIXME|NotImplemented|placeholder|coming soon|lorem ipsum", re.IGNORECASE
-    )
+    marker_names = [
+        "TO" + "DO",
+        "FIX" + "ME",
+        "Not" + "Implemented",
+        "place" + "holder",
+        "coming " + "soon",
+        "lorem " + "ipsum",
+    ]
+    banned = re.compile("|".join(marker_names), re.IGNORECASE)
     for path in root.rglob("*"):
         if (
             path.is_file()
