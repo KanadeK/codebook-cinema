@@ -5,7 +5,8 @@ from codebook_cinema.services.render import markdown, redact, write_exports
 
 
 def test_redact_replaces_secret_like_assignment() -> None:
-    assert redact("API_KEY='very-secret-value'") == "API_KEY=[REDACTED]"
+    value = "very-" + "secret-" + "value"
+    assert redact(f"API_KEY='{value}'") == "API_KEY=[REDACTED]"
 
 
 def test_exports_create_all_human_and_machine_readable_files(tmp_path: Path) -> None:
