@@ -9,5 +9,6 @@ coverage.xml
 build/
 dist/
 dist-release/
+demo-output/
 *.egg-info/
 .env
