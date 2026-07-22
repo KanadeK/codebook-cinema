@@ -24,7 +24,7 @@ classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :
 dev = [
   "build==1.2.2.post1",
   "mypy==1.15.0",
-  "pytest==8.3.5",
+  "pytest==9.1.1",
   "pytest-cov==6.0.0",
   "ruff==0.9.10",
 ]
